@@ -1,0 +1,21 @@
+<div class="container">
+  <h2 class="titulo">Busca tu Ciudad !</h2>
+  <form [formGroup]="ciudadForm!" (ngSubmit)="buscarClima()">
+    <input type="text" formControlName="ciudad" name="ciudad" class="input-ciudad" placeholder="Ingresa una ciudad">
+    <button type="submit" class="boton-buscar"><i class="fas fa-search"></i></button>
+  </form>
+  <br>
+  <div *ngIf="clima" class="card">
+    <h3 class="titulo">{{ clima.name }}</h3>
+    <img class="icono" *ngIf="iconoURL" [src]="iconoURL" alt="Icono del clima">
+    <p>Fecha y Hora: {{ obtenerFechaHora(clima.dt) }}</p>
+    <p>Temperatura: {{ clima.main.temp }} °C</p>
+    <p>Humedad: {{ clima.main.humidity }}%</p>
+    <p>Velocidad del viento: {{ clima.wind.speed }} m/s</p>
+    <p>Dirección del viento: {{ clima.wind.deg }}°</p>
+    <p>Descripción: {{ clima.weather[0].description }}</p>
+  </div>
+
+  <!--Mensaje de error en caso de no encontrar la ciudad -->
+  <div *ngIf="errorMensaje" class="mensaje-error">{{ errorMensaje }}</div>
+</div>

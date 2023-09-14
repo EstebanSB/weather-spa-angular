@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { ClimaComponent } from './components/clima/clima.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: ClimaComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
