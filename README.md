@@ -1,3 +1,13 @@
 # Weather-Spa-Angular
 
-Página web desarrollada en Angular y Node.js. Se conecta a una API REST para buscar una ciudad. Muestra el clima en la ciudad buscada.
+Este proyecto utiliza los siguientes lenguajes de programación:
+
+* JavaScript
+* TypeScript
+* HTML5
+* CSS
+* Angular
+* Node.js
+* Express
+
+La página web se conecta a una API REST para obtener información sobre el clima de una ciudad, muestra el clima de la ciudad buscada.
